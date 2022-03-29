@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main-course {
+    position: relative;
+}
+
+/*Nav*/
+
+ul {
+    position: absolute;
+    list-style: none;
+}
+#Nav {
+    width: 100%;
+    background-color: rgb(41, 51, 82);
+
+}
+/*Main Nav*/
+.Main-nav {
+    display: flex;
+    text-align: center;
+    position: fixed;
+    background-color: rgb(141 130 127 / 11%);
+    height: 84px;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 9999999;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 25%);
+
+}
+.Main-nav .bar,.logo,.magnify-glass {
+    line-height: 84px;
+}
+.Main-nav .bar {
+    position: relative;
+    flex: 1;
+    margin-left: 170px;
+    color : #fff;
+    font-size: 50px;
+    width: 100%;
+}
+.Main-nav .bar .btn {
+    display: none;
+}
+.Main-nav .bar .btn-bars {
+    margin-left: -253px;
+}
+.bar #btn-checked:checked ~ .bar-list{
+    display: block;
+}
+
+/* Bar list */
+.bar .bar-list {
+    display: none;
+    position: fixed;
+    top: -2px;
+    left: 0;
+    padding-left: 127px;
+    text-align: start;
+    background-color: #293352;
+    height: 500px;
+    width: 100%;
+}
+
+.bar-list h2 {
+    font-size: 40px;
+    line-height: 84px;
+    text-align: start;
+}
+.bar-list .fa-solid {
+    font-size: 45px;
+}
+.bar-list .Subject {
+    text-align: start;
+    font-size: 30px;
+    font-weight: lighter;
+}
+.bar-list .Subject a {
+    color : white;
+    text-decoration: none;
+}
+/* logo */
+.Main-nav .logo {
+    flex : 4 ;
+    z-index:  99999999;
+}
+.Main-nav .logo img {
+    width: 320px;
+}
+/* magnify glass */ 
+.Main-nav .magnify-glass {
+    width: 100px;
+    margin-right: 250px;
+    display: flex;
+    align-items: center;
+    z-index: 1 ;
+}
+
+.Main-nav .magnify-glass #magnify{
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 8px;
+    border: coral;
+}
+.Main-nav .magnify-glass .mag-glass {
+    font-size: 30px;
+    padding: 0 5px;
+    color: white;
+}
+
+
+/* Toolbar */
+#toolbar {
+    background-color : rgb(41, 51, 82);
+    height: 350px;
+    width: 100%;
+}
+.toolbar__form {
+    padding-top: 84px;
+}
+.toolbar__form-heading {
+    color : white;
+    font-size: 40px;
+    line-height: 150px;
+    margin-left: 120px;
+}
+.toolbar_list {
+    display: flex;
+    justify-content: start;
+    margin-left: 200px;
+}
+.toolbar__items {
+    position: relative;
+    font-size: 30px;
+    margin: 10px 90px;
+    color: white;
+}
+.toolbar__items:hover .toolbar__form-list{
+    display: block;
+}
+.toolbar__items::after {
+    content: "";
+    position: absolute;
+    width: 115px;
+    height: 14px;
+    left: 0;
+    bottom: -8px;
+}
+.toolbar__form-list{
+    width: 200px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 25%);
+}
+.toolbar__form-list li {
+    margin: 5px 10px;
+    font-size: 20px;
+    list-style: none;
+    color: black;
+}
+.toolbar__form-list .form__list-items {
+
+}
+/*Course*/
+#course {
+    padding-top: 84px;
+    margin: 0 90px;
+}
+.items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(138 129 112 / 12%);
+    border-radius: 6px;
+    width: 100%;
+    height: 300px;
+    margin: 12px 0;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 25%);
+
+}
+.items .name {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}
+.items .price_Course {
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    color: white;
+    background-color: rgb(74, 74, 136);
+    line-height: 55px;
+    width: 70px;
+    border-radius: 50%;
+}
+.picture_course {
+    object-fit: cover;
+    max-height: 240px;
+    width: 100%;
+}
